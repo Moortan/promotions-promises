@@ -1,0 +1,205 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+
+}
+
+header{
+    background-color: #3F51B5;
+    padding: 0.5em;
+    color: #BDBDBD;
+    text-align: center;
+    font-size: 3rem;
+    -webkit-text-stroke: 1px black;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.promoContainer {
+    min-width: 12rem;
+    text-align: center;
+    word-wrap: break-word;
+    border-radius: 1.5em;
+    border: 0.1em solid black;
+    padding: 1em;
+    width: 70%;
+    height: 13em;
+    overflow: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: #4CAF50;
+}
+
+.promoTerms {
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.ctaButton {
+	box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	background:linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+	background-color:#3F51B5;
+	border-radius:6px;
+	border:1px solid #3866a3;
+	display:inline-block;
+	cursor:pointer;
+	color:#14396a;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #7cacde;
+}
+.ctaButton:hover {
+	background:linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
+	background-color:#468ccf;
+}
+.ctaButton:active {
+	position:relative;
+	top:1px;
+}
+
+.disabledButton {
+    background: #C0C0C0;
+	box-shadow:inset 0px 1px 0px 0px #000000;
+	background:linear-gradient(to bottom, #5e5e5e 5%, #c3cdd6 90%);
+	background-color:#5e5e5e;
+	border-radius:6px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #f0f0f0;
+}
+.disabledButton:hover {
+	background:linear-gradient(to bottom, #5e5e5e 5%, #c3cdd6 100%);
+    background-color:#c3cdd6;
+}
+.disabledButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+@media (min-width: 748px){
+    .column {
+        margin: 0 -0.5em;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .promoContainer {
+        margin: 1em 1em 0 0.5em;
+        flex-basis: calc(100% / 3);
+        flex-shrink: 0;
+        height: 20em;
+    }
+}
+
+@media (min-width: 1100px){
+    .promoContainer {
+        flex-basis: calc(100% / 4);
+    }
+}
+
+@media (min-width: 2000px){
+    .promoContainer {
+        flex-basis: calc(100% / 6);
+    }
+}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  max-width: 40rem;
+  text-align: center;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+#modal-text {
+    text-align: center;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+#acceptPromo {
+	box-shadow:inset 0px 1px 0px 0px #3dc21b;
+	background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	background-color:#44c767;
+	border-radius:6px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+#acceptPromo:hover {
+	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+	background-color:#5cbf2a;
+}
+#acceptPromo:active {
+	position:relative;
+	top:1px;
+}
+
+#declinePromo {
+	box-shadow:inset 0px 1px 0px 0px #f7bebe;
+	background:linear-gradient(to bottom, #ed637a 5%, #cf4747 100%);
+	background-color:#ed637a;
+	border-radius:6px;
+	border:1px solid #a13838;
+	display:inline-block;
+	cursor:pointer;
+	color:#691414;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #de7c7c;
+}
+#declinePromo:hover {
+	background:linear-gradient(to bottom, #cf4747 5%, #ed637a 100%);
+	background-color:#cf4747;
+}
+#declinePromo:active {
+	position:relative;
+	top:1px;
+}
+
